@@ -1,6 +1,6 @@
 # Leaderboard — Speech Emotion Recognition Challenge
 
-> Last updated: **2026-04-05 19:59 UTC**  
+> Last updated: **2026-04-05 20:02 UTC**  
 > Baseline weighted F1: **0.4276**  
 > Metric: weighted F1-score on the public test set  
 > Scores are verified server-side from submitted predictions.
