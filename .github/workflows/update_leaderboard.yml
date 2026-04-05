@@ -29,7 +29,6 @@ jobs:
 
       - name: Rebuild leaderboard
         env:
-          BASELINE_F1:  "0.00"    # update this once you have the baseline score
           GROUND_TRUTH: "ground_truth/public_test_labels.csv"
         run: python scripts/build_leaderboard.py
 
