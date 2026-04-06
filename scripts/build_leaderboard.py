@@ -24,7 +24,7 @@ from sklearn.metrics import f1_score
 
 
 SUBMISSIONS_DIR = Path("submissions")
-LEADERBOARD_OUT = Path("leaderboard.md")
+LEADERBOARD_OUT = Path("readme.md")
 BASELINE_JSON   = SUBMISSIONS_DIR / "baseline.json"
 EMOTIONS        = ["anger", "disgust", "fear", "happy", "neutral", "sad"]
 EMOTION_TO_IDX  = {e: i for i, e in enumerate(EMOTIONS)}
