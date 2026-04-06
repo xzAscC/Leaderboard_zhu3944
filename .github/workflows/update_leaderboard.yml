@@ -3,8 +3,8 @@ name: Update leaderboard
 on:
   push:
     paths:
-      - "submissions/**.json"   # triggers on any new or updated JSON in submissions/
-  workflow_dispatch:             # also allow manual trigger from the Actions tab
+      - "submissions/**.csv"   # triggers on any new or updated JSON in submissions/
+  workflow_dispatch:            # also allow manual trigger from the Actions tab
 
 permissions:
   contents: write
@@ -30,12 +30,12 @@ jobs:
       - name: Rebuild leaderboard
         env:
           GROUND_TRUTH: "ground_truth/public_test_labels.csv"
-        run: python scripts/build_leaderboard.py
+        run: python build_leaderboard.py
 
       - name: Commit updated leaderboard
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add readme.md
+          git add README.md
           git diff --staged --quiet || git commit -m "Update leaderboard [$(date -u '+%Y-%m-%d %H:%M UTC')]"
           git push
